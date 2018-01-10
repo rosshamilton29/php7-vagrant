@@ -56,4 +56,8 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo service mongod start
 
+# Set PT-BR
+sudo apt-get install language-pack-pt
+sudo locale-gen pt_BR.UTF-8
+
 echo 'done, all set'
