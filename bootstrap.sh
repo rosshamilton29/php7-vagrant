@@ -29,6 +29,7 @@ sudo apt-get install -y php7.1-json
 sudo apt-get install -y php7.1-curl
 sudo apt-get install -y php7.1-gd
 sudo apt-get install -y php7.1-gmp
+sudo apt-get install -y libapache2-mod-php
 sudo a2enmod rewrite
 sudo service apache2 restart
 # nodejs
@@ -48,5 +49,11 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password_again passwo
 sudo apt install -y mysql-server
 sudo apt install -y mysql-client
 sudo apt install -y libmysqlclient-dev
+# mongodb
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo service mongod start
 
 echo 'done, all set'
