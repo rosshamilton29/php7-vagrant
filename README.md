@@ -2,9 +2,10 @@
 
 ## Setup
 
-* PHP 7.1
+* PHP 7.2
 * Apache 2.4
 * MySQL 5.7
 * Composer
-* NodeJS
+* NodeJS 8
 * GULP
+* Mongo 3.6
