@@ -19,18 +19,20 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get install software-properties-common
 sudo apt-get update
 sudo apt-get install -y php7.2
+sudo apt-get install -y php7.2-common
+sudo apt-get install -y php7.2-cli
+sudo apt-get install -y php7.2-readline
 sudo apt-get install -y php7.2-mbstring
 sudo apt-get install -y php7.2-mcrypt
 sudo apt-get install -y php7.2-mysql
 sudo apt-get install -y php7.2-xml
 sudo apt-get install -y php7.2-zip
-sudo apt-get install -y php7.2-cli
 sudo apt-get install -y php7.2-json
 sudo apt-get install -y php7.2-curl
 sudo apt-get install -y php7.2-gd
 sudo apt-get install -y php7.2-gmp
 sudo apt-get install -y php7.2-mongodb
-sudo apt-get install -y libapache2-mod-php
+sudo apt-get install -y libapache2-mod-php7.2
 sudo a2enmod rewrite
 sudo service apache2 restart
 # nodejs
