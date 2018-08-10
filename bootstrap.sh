@@ -53,12 +53,14 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password_again passwo
 sudo apt install -y mysql-server
 sudo apt install -y mysql-client
 sudo apt install -y libmysqlclient-dev
+
 # mongodb
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
-sudo service mongod start
+sudo systemctl start mongod
+sudo systemctl enable mongod
 
 # Set PT-BR
 sudo apt-get install language-pack-pt
