@@ -43,11 +43,9 @@ php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 
 # nodejs
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
-# gulp
-sudo npm install gulp-cli -g
-sudo npm install eslint -g
+sudo npm i -g npm
 
 # mysql
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
